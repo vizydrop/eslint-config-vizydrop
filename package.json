@@ -11,7 +11,7 @@
     "url": "https://github.com/vizydrop/eslint-config-vizydrop/issues"
   },
   "homepage": "https://github.com/vizydrop/eslint-config-vizydrop#readme",
-  "peerDependencies": {
+  "dependencies": {
     "eslint": "^3.17.1",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-config-standard": "^7.0.1",
