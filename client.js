@@ -7,13 +7,7 @@ module.exports = {
     "lodash-fp"
   ],
   "settings": {
-    "import/resolver": {
-      "node": {
-        "moduleDirectory": [
-          "node_modules"
-        ]
-      }
-    }
+    "import/resolver": "node"
   },
   "env": {
     "node": true,
