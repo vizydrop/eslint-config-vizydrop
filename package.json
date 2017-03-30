@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-vizydrop",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Shareable eslint config for frontend and backend",
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
     "eslint-config-standard": "^7.0.1",
     "eslint-plugin-class-property": "^1.0.3",
     "eslint-plugin-filenames": "^1.1.0",
+    "eslint-plugin-flowtype": "^2.30.4",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-lodash-fp": "^2.1.3",

@@ -2,6 +2,7 @@ module.exports = {
   "extends": "airbnb",
   "parser": "babel-eslint",
   "plugins": [
+    "flowtype",
     "filenames",
     "class-property",
     "lodash-fp"
@@ -93,6 +94,31 @@ module.exports = {
     "lodash-fp/prefer-composition-grouping": "error",
     "lodash-fp/prefer-flat-map": "error",
     "lodash-fp/prefer-get": "error",
-    "lodash-fp/use-fp": "error"
+    "lodash-fp/use-fp": "error",
+    "flowtype/boolean-style": "error",
+    "flowtype/define-flow-type": "error",
+    "flowtype/delimiter-dangle": [
+      "error",
+      "only-multiline"
+    ],
+    "flowtype/generic-spacing": [
+      "error",
+      "never"
+    ],
+    "flowtype/no-dupe-keys": "error",
+    "flowtype/no-primitive-constructor-types": "error",
+    "flowtype/object-type-delimiter": [
+      "error",
+      "comma"
+    ],
+    "flowtype/semi": "error",
+    "flowtype/space-after-type-colon": [
+      "error",
+      "always"
+    ],
+    "flowtype/space-before-generic-bracket": "error",
+    "flowtype/space-before-type-colon": "error",
+    "flowtype/union-intersection-spacing": "error",
+    "flowtype/use-flow-type": "error"
   }
 };
