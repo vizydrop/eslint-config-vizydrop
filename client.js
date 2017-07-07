@@ -88,7 +88,6 @@ module.exports = {
         "lodash-fp/no-partial-of-curried": "error",
         "lodash-fp/no-single-composition": "error",
         "lodash-fp/prefer-compact": "error",
-        "lodash-fp/prefer-composition-grouping": "error",
         "lodash-fp/prefer-flat-map": "error",
         "lodash-fp/prefer-get": "error",
         "lodash-fp/use-fp": "error",
