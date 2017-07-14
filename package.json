@@ -22,7 +22,7 @@
     "eslint-plugin-flowtype": "^2.35.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
-    "eslint-plugin-lodash-fp": "^2.1.3",
+    "eslint-plugin-lodash-fp": "iofjuupasli/eslint-plugin-lodash-fp#patch-1",
     "eslint-plugin-mocha": "^4.11.0",
     "eslint-plugin-node": "^4.2.2",
     "eslint-plugin-promise": "^3.5.0",
