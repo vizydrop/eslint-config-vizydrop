@@ -11,7 +11,7 @@
   },
   "homepage": "https://github.com/vizydrop/eslint-config-vizydrop#readme",
   "peerDependencies": {
-    "eslint": "^4.0.0"
+    "eslint": "^3.0.0"
   },
   "dependencies": {
     "babel-eslint": "^7.2.3",
