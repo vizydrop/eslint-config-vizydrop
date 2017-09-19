@@ -51,6 +51,17 @@ module.exports = {
         "react/jsx-indent-props": [
             "error", 4
         ],
+        "react/sort-comp": [
+            "error", {
+                order: [
+                    "type-annotations",
+                    "static-methods",
+                    "lifecycle",
+                    "everything-else",
+                    "render"
+                ]
+            }
+        ],
         "filenames/match-exported": "error",
         "import/no-extraneous-dependencies": 0,
         "jsx-a11y/label-has-for": 0,
