@@ -72,7 +72,6 @@ module.exports = {
         "react/jsx-indent-props": [
             "error", 4
         ],
-        "dot-notation": 1,
         "react/sort-comp": [
             "error", {
                 order: [
