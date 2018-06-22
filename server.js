@@ -7,27 +7,13 @@ module.exports = {
         "mocha"
     ],
     "parserOptions": {
-        "ecmaVersion": 6,
-        "sourceType": "module"
+        "ecmaVersion": 2017,
     },
     "env": {
         "node": true,
         "mocha": true,
-        "es6": true,
-        "jest": true
     },
     "rules": {
-        "max-len": [
-            "error",
-            120,
-            4, {
-                "ignoreUrls": true,
-                "ignoreComments": false,
-                "ignoreRegExpLiterals": true,
-                "ignoreStrings": true,
-                "ignoreTemplateLiterals": true
-            }
-        ],
         "semi": [
             "error", "always"
         ],
@@ -46,6 +32,29 @@ module.exports = {
                 "anonymous": "always"
             }
         ],
-        "mocha/no-exclusive-tests": ["error"]
+        "mocha/no-exclusive-tests": ["error"],
+        "arrow-parens": [
+            "error", "always"
+        ],
+        "complexity": [
+            "warn",
+            5
+        ],
+        "max-depth": [
+            "warn",
+            4
+        ],
+        "max-nested-callbacks": [
+            "warn",
+            4
+        ],
+        "max-params": [
+            "warn",
+            5
+        ],
+        "max-statements": [
+            "warn",
+            20
+        ]
     }
 };
