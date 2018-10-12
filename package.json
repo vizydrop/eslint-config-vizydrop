@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-vizydrop",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Shareable eslint config for frontend and backend",
   "repository": {
     "type": "git",

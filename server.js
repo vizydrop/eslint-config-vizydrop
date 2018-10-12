@@ -31,6 +31,8 @@ module.exports = {
         }
     ],
     "rules": {
+        "implicit-arrow-linebreak": 0,
+        "operator-linebreak": [2, "after"],
         "max-depth": [1, 4],
         "max-nested-callbacks": [1, 4],
         "max-params": [1, 4],
