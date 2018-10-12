@@ -1,61 +1,63 @@
 module.exports = {
-    "extends": "airbnb",
-    "parser": "babel-eslint",
-    "plugins": [
-        "flowtype",
-        "filenames",
-        "class-property",
-        "lodash-fp"
+    extends: `airbnb`,
+    parser: `babel-eslint`,
+    plugins: [
+        `flowtype`,
+        `filenames`,
+        `class-property`,
+        `lodash-fp`,
+        `mocha`,
+        `promise`,
     ],
-    "env": {
-        "node": true,
-        "browser": true
+    env: {
+        node: true,
+        browser: true,
     },
-    "overrides": [
+    overrides: [
         {
-            "files": [
-                "test.js",
-                "*.test.js",
-                "*.test.jsx",
-                "**/__tests__/**.js",
-                "**/__mocks__/**.js",
-                "**/__tests__/**.jsx",
-                "**/tests/**/*.js"
+            files: [
+                `test.js`,
+                `*.test.js`,
+                `*.test.jsx`,
+                `**/__tests__/**.js`,
+                `**/__mocks__/**.js`,
+                `**/__tests__/**.jsx`,
+                `**/tests/**/*.js`,
             ],
-            "env": {
-                "node": true,
-                "browser": true,
-                "mocha": true,
-                "jest": true
+            env: {
+                node: true,
+                browser: true,
+                mocha: true,
+                jest: true,
             },
-        }
+        },
     ],
-    "rules": {
-        "implicit-arrow-linebreak": 0,
-        "operator-linebreak": [2, "after"],
-        "max-depth": [1, 4],
-        "max-nested-callbacks": [1, 4],
-        "max-params": [1, 4],
-        "max-statements": [1, 10],
+    rules: {
+        'implicit-arrow-linebreak': 0,
+        'operator-linebreak': [2, `after`],
+        'max-depth': [1, 4],
+        'max-nested-callbacks': [1, 4],
+        'max-params': [1, 4],
+        'max-statements': [1, 10],
         'max-len': [
-            "error",
+            `error`,
             120,
             4, {
-                "ignoreUrls": true,
-                "ignoreComments": false,
-                "ignoreRegExpLiterals": true,
-                "ignoreStrings": true,
-                "ignoreTemplateLiterals": true
-            }
+                ignoreUrls: true,
+                ignoreComments: false,
+                ignoreRegExpLiterals: true,
+                ignoreStrings: true,
+                ignoreTemplateLiterals: true,
+            },
         ],
-        "no-plusplus": 0,
-        "quotes": [
-            "error", "backtick"
+        'no-plusplus': 0,
+        quotes: [
+            `error`, `backtick`,
         ],
-        "prefer-destructuring": 0,
-        "function-paren-newline": ["error", "consistent"],
-        "indent": [
-            "error",
+        'prefer-destructuring': 0,
+        'function-paren-newline': [`error`, `consistent`],
+        indent: [
+            `error`,
             4, {
                 SwitchCase: 1,
                 VariableDeclarator: 1,
@@ -63,78 +65,92 @@ module.exports = {
                 // MemberExpression: null,
                 FunctionDeclaration: {
                     parameters: 1,
-                    body: 1
+                    body: 1,
                 },
                 FunctionExpression: {
                     parameters: 1,
-                    body: 1
+                    body: 1,
                 },
                 CallExpression: {
-                    arguments: 1
+                    arguments: 1,
                 },
                 ArrayExpression: 1,
                 ObjectExpression: 1,
                 ImportDeclaration: 1,
                 flatTernaryExpressions: false,
-                ignoredNodes: ['JSXElement', 'JSXElement *']
-            }
+                ignoredNodes: [`JSXElement`, `JSXElement *`],
+            },
         ],
-        "filenames/match-exported": [
-            "error",
-            ["kebab", "camel", "pascal", null]
+        'filenames/match-exported': [
+            `error`,
+            [`kebab`, `camel`, `pascal`, null],
         ],
-        "import/no-extraneous-dependencies": 0,
-        "import/prefer-default-export": 0,
-        "class-methods-use-this": 0,
-        "no-underscore-dangle": 2,
-        "object-curly-spacing": [
-            "error", "never"
+        'import/no-extraneous-dependencies': 0,
+        'import/prefer-default-export': 0,
+        'class-methods-use-this': 0,
+        'no-underscore-dangle': 2,
+        'object-curly-spacing': [
+            `error`, `never`,
         ],
-        "arrow-parens": [
-            "error", "always"
+        'arrow-parens': [
+            `error`, `always`,
         ],
-        "class-property/class-property-semicolon": [
-            "error", "always"
+        'class-property/class-property-semicolon': [
+            `error`, `always`,
         ],
-        "lodash-fp/consistent-compose": [
-            "error", "pipe"
+        'lodash-fp/consistent-compose': [
+            `error`, `pipe`,
         ],
-        "lodash-fp/consistent-name": [
-            "error", "_"
+        'lodash-fp/consistent-name': [
+            `error`, `_`,
         ],
-        "lodash-fp/no-argumentless-calls": "error",
-        "lodash-fp/no-chain": "error",
-        "lodash-fp/no-extraneous-args": "error",
-        "lodash-fp/no-extraneous-iteratee-args": "error",
-        "lodash-fp/no-partial-of-curried": "error",
-        "lodash-fp/no-single-composition": "error",
-        "lodash-fp/prefer-compact": "error",
-        "lodash-fp/prefer-flat-map": "error",
-        "lodash-fp/prefer-get": "error",
-        "lodash-fp/use-fp": "error",
-        "lodash-fp/preferred-alias": ["error", {overrides: ["pipe", "first"]}],
-        "flowtype/boolean-style": "error",
-        "flowtype/define-flow-type": "error",
-        "flowtype/delimiter-dangle": [
-            "error", "only-multiline"
+        'lodash-fp/no-argumentless-calls': `error`,
+        'lodash-fp/no-chain': `error`,
+        'lodash-fp/no-extraneous-args': `error`,
+        'lodash-fp/no-extraneous-iteratee-args': `error`,
+        'lodash-fp/no-partial-of-curried': `error`,
+        'lodash-fp/no-single-composition': `error`,
+        'lodash-fp/prefer-compact': `error`,
+        'lodash-fp/prefer-flat-map': `error`,
+        'lodash-fp/prefer-get': `error`,
+        'lodash-fp/use-fp': `error`,
+        'lodash-fp/preferred-alias': [`error`, {overrides: [`pipe`, `first`]}],
+        'flowtype/boolean-style': `error`,
+        'flowtype/define-flow-type': `error`,
+        'flowtype/delimiter-dangle': [
+            `error`, `only-multiline`,
         ],
-        "flowtype/generic-spacing": [
-            "error", "never"
+        'flowtype/generic-spacing': [
+            `error`, `never`,
         ],
-        "flowtype/no-dupe-keys": "error",
-        "flowtype/no-primitive-constructor-types": "error",
-        "flowtype/object-type-delimiter": [
-            "error", "comma"
+        'flowtype/no-dupe-keys': `error`,
+        'flowtype/no-primitive-constructor-types': `error`,
+        'flowtype/object-type-delimiter': [
+            `error`, `comma`,
         ],
-        "flowtype/semi": "error",
-        "flowtype/space-after-type-colon": [
-            "error", "always"
+        'flowtype/semi': `error`,
+        'flowtype/space-after-type-colon': [
+            `error`, `always`,
         ],
-        "flowtype/space-before-generic-bracket": "error",
-        "flowtype/space-before-type-colon": "error",
-        "flowtype/union-intersection-spacing": "error",
-        "flowtype/use-flow-type": "error",
-        "flowtype/array-style-complex-type": "error",
-        "flowtype/no-types-missing-file-annotation": "error"
-    }
+        'flowtype/space-before-generic-bracket': `error`,
+        'flowtype/space-before-type-colon': `error`,
+        'flowtype/union-intersection-spacing': `error`,
+        'flowtype/use-flow-type': `error`,
+        'flowtype/array-style-complex-type': `error`,
+        'flowtype/no-types-missing-file-annotation': `error`,
+        'mocha/handle-done-callback': 2,
+        'mocha/no-nested-tests': 2,
+        'mocha/no-pending-tests': 2,
+        'mocha/no-return-and-callback': 2,
+        'promise/no-return-wrap': 2,
+        'promise/param-names': 2,
+        'promise/no-promise-in-callback': 1,
+        'promise/no-callback-in-promise': 1,
+        'promise/no-new-statics': 2,
+        'no-restricted-properties': [0, {
+            object: `Math`,
+            property: `pow`,
+        }],
+        'func-names': [1, `as-needed`],
+    },
 };
