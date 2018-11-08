@@ -2,18 +2,19 @@ const serverConfig = require(`./server`);
 
 module.exports = {
     ...serverConfig,
+    extends: `airbnb`,
     globals: {
         ...serverConfig.globals,
         __taus: true,
-        __track: true
+        __track: true,
     },
     rules: {
         ...serverConfig.rules,
         'react/jsx-indent': [
-            `error`, 4
+            `error`, 4,
         ],
         'react/jsx-indent-props': [
-            `error`, 4
+            `error`, 4,
         ],
         'react/sort-comp': [
             `error`, {
@@ -25,9 +26,9 @@ module.exports = {
                     `static-methods`,
                     `lifecycle`,
                     `everything-else`,
-                    `render`
-                ]
-            }
+                    `render`,
+                ],
+            },
         ],
         'jsx-a11y/label-has-for': 0,
         'jsx-a11y/no-static-element-interactions': 0,
@@ -48,8 +49,8 @@ module.exports = {
         'react/jsx-one-expression-per-line': 0,
         'no-underscore-dangle': [
             `error`, {
-                allow: [`__taus`, `__track`]
-            }
-        ]
-    }
+                allow: [`__taus`, `__track`],
+            },
+        ],
+    },
 };
