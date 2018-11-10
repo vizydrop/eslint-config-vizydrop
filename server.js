@@ -38,7 +38,7 @@ module.exports = {
         'max-depth': [1, 4],
         'max-nested-callbacks': [1, 4],
         'max-params': [1, 4],
-        'max-statements': [1, 10],
+        'max-statements': [1, 15],
         'max-len': [
             `error`,
             120,
