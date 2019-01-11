@@ -8,6 +8,7 @@ module.exports = {
         `lodash-fp`,
         `mocha`,
         `promise`,
+        `node`,
     ],
     env: {
         node: true,
@@ -19,6 +20,8 @@ module.exports = {
                 `test.js`,
                 `*.test.js`,
                 `*.test.jsx`,
+                `*.tests.js`,
+                `*.tests.jsx`,
                 `**/__tests__/**.js`,
                 `**/__mocks__/**.js`,
                 `**/__tests__/**.jsx`,
@@ -30,6 +33,9 @@ module.exports = {
                 mocha: true,
                 jest: true,
             },
+            rules: {
+                'node/no-unpublished-require': 0,
+            }
         },
     ],
     rules: {
@@ -152,5 +158,6 @@ module.exports = {
             property: `pow`,
         }],
         'func-names': [1, `as-needed`],
+        'node/no-unpublished-require': 2,
     },
 };
