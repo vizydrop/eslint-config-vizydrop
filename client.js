@@ -2,6 +2,7 @@ const serverConfig = require(`./server`);
 
 module.exports = {
     ...serverConfig,
+    plugins: serverConfig.plugins.filter((plugin) => plugin !== `node`),
     extends: `airbnb`,
     globals: {
         ...serverConfig.globals,
@@ -52,5 +53,6 @@ module.exports = {
                 allow: [`__taus`, `__track`],
             },
         ],
+        'node/no-unpublished-require': 0,
     },
 };
