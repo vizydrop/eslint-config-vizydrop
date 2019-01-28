@@ -22,6 +22,8 @@ module.exports = {
                 `*.test.jsx`,
                 `*.tests.js`,
                 `*.tests.jsx`,
+                `*.mocks.js`,
+                `*.mock.js`,
                 `**/__tests__/**.js`,
                 `**/__mocks__/**.js`,
                 `**/__tests__/**.jsx`,
