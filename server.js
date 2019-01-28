@@ -159,5 +159,6 @@ module.exports = {
         }],
         'func-names': [1, `as-needed`],
         'node/no-unpublished-require': 2,
+        'no-nested-ternary': 0,
     },
 };
