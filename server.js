@@ -1,166 +1,81 @@
 module.exports = {
-    extends: `airbnb-base`,
-    parser: `babel-eslint`,
-    plugins: [
-        `flowtype`,
-        `filenames`,
-        `class-property`,
-        `lodash-fp`,
-        `mocha`,
-        `promise`,
-        `node`,
-    ],
-    env: {
+  extends: [`airbnb-base`, `prettier`],
+  parser: `babel-eslint`,
+  plugins: [`filenames`, `class-property`, `promise`, `node`],
+  env: {
+    node: true,
+    browser: true
+  },
+  overrides: [
+    {
+      files: [
+        `test.js`,
+        `*.test.js`,
+        `*.test.jsx`,
+        `*.tests.js`,
+        `*.tests.jsx`,
+        `*.mocks.js`,
+        `*.mock.js`,
+        `**/__tests__/**.js`,
+        `**/__mocks__/**.js`,
+        `**/__tests__/**.jsx`,
+        `**/tests/**/*.js`
+      ],
+      env: {
         node: true,
         browser: true,
-    },
-    overrides: [
-        {
-            files: [
-                `test.js`,
-                `*.test.js`,
-                `*.test.jsx`,
-                `*.tests.js`,
-                `*.tests.jsx`,
-                `*.mocks.js`,
-                `*.mock.js`,
-                `**/__tests__/**.js`,
-                `**/__mocks__/**.js`,
-                `**/__tests__/**.jsx`,
-                `**/tests/**/*.js`,
-            ],
-            env: {
-                node: true,
-                browser: true,
-                mocha: true,
-                jest: true,
-            },
-            rules: {
-                'node/no-unpublished-require': 0,
-            }
-        },
+        mocha: true,
+        jest: true
+      },
+      rules: {
+        "node/no-unpublished-require": 0
+      }
+    }
+  ],
+  rules: {
+    "implicit-arrow-linebreak": 0,
+    "max-depth": [1, 4],
+    "max-nested-callbacks": [1, 4],
+    "max-params": [1, 4],
+    "max-statements": [1, 15],
+    "max-len": [
+      `error`,
+      120,
+      4,
+      {
+        ignoreUrls: true,
+        ignoreComments: false,
+        ignoreRegExpLiterals: true,
+        ignoreStrings: true,
+        ignoreTemplateLiterals: true
+      }
     ],
-    rules: {
-        'implicit-arrow-linebreak': 0,
-        'operator-linebreak': [2, `after`],
-        'max-depth': [1, 4],
-        'max-nested-callbacks': [1, 4],
-        'max-params': [1, 4],
-        'max-statements': [1, 15],
-        'max-len': [
-            `error`,
-            120,
-            4, {
-                ignoreUrls: true,
-                ignoreComments: false,
-                ignoreRegExpLiterals: true,
-                ignoreStrings: true,
-                ignoreTemplateLiterals: true,
-            },
-        ],
-        'no-plusplus': 0,
-        quotes: [
-            `error`, `backtick`,
-        ],
-        'prefer-destructuring': 0,
-        'function-paren-newline': [`error`, `consistent`],
-        indent: [
-            `error`,
-            4, {
-                SwitchCase: 1,
-                VariableDeclarator: 1,
-                outerIIFEBody: 1,
-                // MemberExpression: null,
-                FunctionDeclaration: {
-                    parameters: 1,
-                    body: 1,
-                },
-                FunctionExpression: {
-                    parameters: 1,
-                    body: 1,
-                },
-                CallExpression: {
-                    arguments: 1,
-                },
-                ArrayExpression: 1,
-                ObjectExpression: 1,
-                ImportDeclaration: 1,
-                flatTernaryExpressions: false,
-                ignoredNodes: [`JSXElement`, `JSXElement *`],
-            },
-        ],
-        'filenames/match-exported': [
-            `error`,
-            [`kebab`, `camel`, `pascal`, null],
-        ],
-        'import/no-extraneous-dependencies': 0,
-        'import/prefer-default-export': 0,
-        'class-methods-use-this': 0,
-        'no-underscore-dangle': 2,
-        'object-curly-spacing': [
-            `error`, `never`,
-        ],
-        'arrow-parens': [
-            `error`, `always`,
-        ],
-        'class-property/class-property-semicolon': [
-            `error`, `always`,
-        ],
-        'lodash-fp/consistent-compose': [
-            `error`, `pipe`,
-        ],
-        'lodash-fp/consistent-name': [
-            `error`, `_`,
-        ],
-        'lodash-fp/no-argumentless-calls': `error`,
-        'lodash-fp/no-chain': `error`,
-        'lodash-fp/no-extraneous-args': `error`,
-        'lodash-fp/no-extraneous-iteratee-args': `error`,
-        'lodash-fp/no-partial-of-curried': `error`,
-        'lodash-fp/no-single-composition': `error`,
-        'lodash-fp/prefer-compact': `error`,
-        'lodash-fp/prefer-flat-map': `error`,
-        'lodash-fp/prefer-get': `error`,
-        'lodash-fp/use-fp': `error`,
-        'lodash-fp/preferred-alias': [`error`, {overrides: [`pipe`, `first`]}],
-        'flowtype/boolean-style': `error`,
-        'flowtype/define-flow-type': `error`,
-        'flowtype/delimiter-dangle': [
-            `error`, `only-multiline`,
-        ],
-        'flowtype/generic-spacing': [
-            `error`, `never`,
-        ],
-        'flowtype/no-dupe-keys': `error`,
-        'flowtype/no-primitive-constructor-types': `error`,
-        'flowtype/object-type-delimiter': [
-            `error`, `comma`,
-        ],
-        'flowtype/semi': `error`,
-        'flowtype/space-after-type-colon': [
-            `error`, `always`,
-        ],
-        'flowtype/space-before-generic-bracket': `error`,
-        'flowtype/space-before-type-colon': `error`,
-        'flowtype/union-intersection-spacing': `error`,
-        'flowtype/use-flow-type': `error`,
-        'flowtype/array-style-complex-type': `error`,
-        'flowtype/no-types-missing-file-annotation': `error`,
-        'mocha/handle-done-callback': 2,
-        'mocha/no-nested-tests': 2,
-        'mocha/no-pending-tests': 2,
-        'mocha/no-return-and-callback': 2,
-        'promise/no-return-wrap': 2,
-        'promise/param-names': 2,
-        'promise/no-promise-in-callback': 1,
-        'promise/no-callback-in-promise': 1,
-        'promise/no-new-statics': 2,
-        'no-restricted-properties': [0, {
-            object: `Math`,
-            property: `pow`,
-        }],
-        'func-names': [1, `as-needed`],
-        'node/no-unpublished-require': 2,
-        'no-nested-ternary': 0,
-    },
+    "no-plusplus": 0,
+    quotes: [`error`, `backtick`],
+    "prefer-destructuring": 0,
+    "filenames/match-exported": [`error`, [`kebab`, `camel`, `pascal`, null]],
+    "import/no-extraneous-dependencies": 0,
+    "import/prefer-default-export": 0,
+    "class-methods-use-this": 0,
+    "no-underscore-dangle": 2,
+    "object-curly-spacing": [`error`, `never`],
+    "arrow-parens": [`error`, `always`],
+    "class-property/class-property-semicolon": [`error`, `always`],
+    "promise/no-return-wrap": 2,
+    "promise/param-names": 2,
+    "promise/no-promise-in-callback": 1,
+    "promise/no-callback-in-promise": 1,
+    "promise/no-new-statics": 2,
+    "no-restricted-properties": [
+      0,
+      {
+        object: `Math`,
+        property: `pow`
+      }
+    ],
+    "func-names": [1, `as-needed`],
+    "node/no-unpublished-require": 2,
+    "no-nested-ternary": 0,
+    "space-before-function-paren": 0
+  }
 };
