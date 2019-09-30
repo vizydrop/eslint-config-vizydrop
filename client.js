@@ -6,7 +6,7 @@ module.exports = {
     ...serverConfig.plugins.filter(plugin => plugin !== `node`),
     `react-hooks`
   ],
-  extends: [`airbnb`, `airbnb/hooks`, `prettier`],
+  extends: [`airbnb`, `airbnb/hooks`, `prettier`, `prettier/react`, `prettier/flowtype`],
   rules: {
     ...serverConfig.rules,
     "react/jsx-indent": [`error`, 4],
@@ -42,8 +42,6 @@ module.exports = {
     "react/no-array-index-key": 0,
     "react/prefer-stateless-function": 0,
     "react/no-access-state-in-setstate": 0,
-    "react/jsx-wrap-multilines": 0,
-    "react/jsx-one-expression-per-line": 0,
     "react-hooks/rules-of-hooks": 2,
     "react-hooks/exhaustive-deps": 2
   }
