@@ -1,5 +1,6 @@
 module.exports = {
   plugins: ["flowtype"],
+  extends: ["prettier/flowtype"],
   rules: {
     "flowtype/define-flow-type": `error`,
     "flowtype/no-dupe-keys": `error`,

@@ -6,13 +6,7 @@ module.exports = {
     ...serverConfig.plugins.filter(plugin => plugin !== `node`),
     `react-hooks`
   ],
-  extends: [
-    `airbnb`,
-    `airbnb/hooks`,
-    `prettier`,
-    `prettier/react`,
-    `prettier/flowtype`
-  ],
+  extends: [`airbnb`, `airbnb/hooks`, `prettier`, `prettier/react`],
   rules: {
     ...serverConfig.rules,
     "react/sort-comp": [
