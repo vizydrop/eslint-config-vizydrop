@@ -1,5 +1,5 @@
 module.exports = {
-  extends: [`airbnb-base`, `prettier`],
+  extends: [`airbnb-base`, `prettier`, `prettier/flowtype`, `prettier/react`],
   parser: `babel-eslint`,
   plugins: [`filenames`, `class-property`, `promise`, `node`],
   env: {
