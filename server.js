@@ -58,8 +58,6 @@ module.exports = {
     "import/prefer-default-export": 0,
     "class-methods-use-this": 0,
     "no-underscore-dangle": 2,
-    "object-curly-spacing": [`error`, `never`],
-    "arrow-parens": [`error`, `always`],
     "class-property/class-property-semicolon": [`error`, `always`],
     "promise/no-return-wrap": 2,
     "promise/param-names": 2,
@@ -75,7 +73,6 @@ module.exports = {
     ],
     "func-names": [1, `as-needed`],
     "node/no-unpublished-require": 2,
-    "no-nested-ternary": 0,
-    "space-before-function-paren": 0
+    "no-nested-ternary": 0
   }
 };

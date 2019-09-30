@@ -6,11 +6,15 @@ module.exports = {
     ...serverConfig.plugins.filter(plugin => plugin !== `node`),
     `react-hooks`
   ],
-  extends: [`airbnb`, `airbnb/hooks`, `prettier`, `prettier/react`, `prettier/flowtype`],
+  extends: [
+    `airbnb`,
+    `airbnb/hooks`,
+    `prettier`,
+    `prettier/react`,
+    `prettier/flowtype`
+  ],
   rules: {
     ...serverConfig.rules,
-    "react/jsx-indent": [`error`, 4],
-    "react/jsx-indent-props": [`error`, 4],
     "react/sort-comp": [
       `error`,
       {
