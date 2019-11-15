@@ -1,7 +1,7 @@
 module.exports = {
   extends: [`airbnb-base`, `prettier`],
   parser: `babel-eslint`,
-  plugins: [`filenames`, `class-property`, `promise`, `node`],
+  plugins: [`filenames`, `babel`, `promise`, `node`],
   env: {
     node: true,
     browser: true
@@ -58,7 +58,7 @@ module.exports = {
     "import/prefer-default-export": 0,
     "class-methods-use-this": 0,
     "no-underscore-dangle": 2,
-    "class-property/class-property-semicolon": [`error`, `always`],
+    "babel/semi": [`error`, `always`],
     "promise/no-return-wrap": 2,
     "promise/param-names": 2,
     "promise/no-promise-in-callback": 1,
