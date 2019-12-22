@@ -15,6 +15,7 @@ module.exports = {
         order: [
           `displayName`,
           `defaultProps`,
+          `contextType`,
           `propTypes`,
           `type-annotations`,
           `static-methods`,
