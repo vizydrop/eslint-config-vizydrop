@@ -4,7 +4,7 @@ module.exports = {
   plugins: [`filenames`, `babel`, `promise`, `node`],
   env: {
     node: true,
-    browser: true
+    browser: true,
   },
   overrides: [
     {
@@ -19,18 +19,18 @@ module.exports = {
         `**/__tests__/**.js`,
         `**/__mocks__/**.js`,
         `**/__tests__/**.jsx`,
-        `**/tests/**/*.js`
+        `**/tests/**/*.js`,
       ],
       env: {
         node: true,
         browser: true,
         mocha: true,
-        jest: true
+        jest: true,
       },
       rules: {
-        "node/no-unpublished-require": 0
-      }
-    }
+        "node/no-unpublished-require": 0,
+      },
+    },
   ],
   rules: {
     "implicit-arrow-linebreak": 0,
@@ -47,8 +47,8 @@ module.exports = {
         ignoreComments: false,
         ignoreRegExpLiterals: true,
         ignoreStrings: true,
-        ignoreTemplateLiterals: true
-      }
+        ignoreTemplateLiterals: true,
+      },
     ],
     "no-plusplus": 0,
     quotes: [`error`, `backtick`],
@@ -68,11 +68,11 @@ module.exports = {
       0,
       {
         object: `Math`,
-        property: `pow`
-      }
+        property: `pow`,
+      },
     ],
     "func-names": [1, `as-needed`],
     "node/no-unpublished-require": 2,
-    "no-nested-ternary": 0
-  }
+    "no-nested-ternary": 0,
+  },
 };

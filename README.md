@@ -1,7 +1,7 @@
 http://eslint.org/docs/developer-guide/shareable-configs
 
-Usage (yml)
----
+## Usage (yml)
+
 ```yml
 extends: vizydrop/client
 ```

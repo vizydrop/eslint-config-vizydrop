@@ -13,6 +13,6 @@ module.exports = {
     "lodash-fp/prefer-flat-map": `error`,
     "lodash-fp/prefer-get": `error`,
     "lodash-fp/use-fp": `error`,
-    "lodash-fp/preferred-alias": [`error`, { overrides: [`pipe`, `first`] }]
-  }
+    "lodash-fp/preferred-alias": [`error`, { overrides: [`pipe`, `first`] }],
+  },
 };

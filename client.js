@@ -3,8 +3,8 @@ const serverConfig = require(`./server`);
 module.exports = {
   ...serverConfig,
   plugins: [
-    ...serverConfig.plugins.filter(plugin => plugin !== `node`),
-    `react-hooks`
+    ...serverConfig.plugins.filter((plugin) => plugin !== `node`),
+    `react-hooks`,
   ],
   extends: [`airbnb`, `airbnb/hooks`, `prettier`, `prettier/react`],
   rules: {
@@ -21,9 +21,9 @@ module.exports = {
           `static-methods`,
           `lifecycle`,
           `everything-else`,
-          `render`
-        ]
-      }
+          `render`,
+        ],
+      },
     ],
     "jsx-a11y/label-has-for": 0,
     "jsx-a11y/no-static-element-interactions": 0,
@@ -42,6 +42,6 @@ module.exports = {
     "react/prefer-stateless-function": 0,
     "react/no-access-state-in-setstate": 0,
     "react-hooks/rules-of-hooks": 2,
-    "react-hooks/exhaustive-deps": 2
-  }
+    "react-hooks/exhaustive-deps": 2,
+  },
 };
